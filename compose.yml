@@ -10,6 +10,7 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ./postgres/functions:/docker-entrypoint-initdb.d  # <-- scripts exécutés au démarrage
     networks:
       - insurance-network
     healthcheck:
