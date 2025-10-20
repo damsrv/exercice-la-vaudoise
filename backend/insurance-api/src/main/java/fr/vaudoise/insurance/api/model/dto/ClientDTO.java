@@ -23,11 +23,7 @@ import java.time.LocalDate;
         @JsonSubTypes.Type(value = PersonDTO.class, name = "PERSON"),
         @JsonSubTypes.Type(value = CompanyDTO.class, name = "COMPANY")
 })
-@Schema(
-        description = "Client base information",
-        discriminatorProperty = "type",
-        oneOf = {PersonDTO.class, CompanyDTO.class}
-)
+@Schema(description = "Client base information")
 public abstract class ClientDTO {
 
     @Schema(description = "Client ID", example = "1", accessMode = Schema.AccessMode.READ_ONLY)
