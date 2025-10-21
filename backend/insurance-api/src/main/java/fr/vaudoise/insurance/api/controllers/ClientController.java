@@ -2,6 +2,8 @@ package fr.vaudoise.insurance.api.controllers;
 
 import fr.vaudoise.insurance.api.model.dto.ClientDTO;
 import fr.vaudoise.insurance.api.model.dto.ClientUpdateDTO;
+import fr.vaudoise.insurance.api.model.dto.CompanyDTO;
+import fr.vaudoise.insurance.api.model.dto.PersonDTO;
 import fr.vaudoise.insurance.api.service.ClientService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -29,7 +31,7 @@ public class ClientController {
             description = "Creates a new client (Person or Company) in the system",
             responses = {
                     @ApiResponse(responseCode = "201", description = "Client created successfully",
-                            content = @Content(schema = @Schema(implementation = ClientDTO.class))),
+                            content = @Content(schema =@Schema(oneOf = { PersonDTO.class, CompanyDTO.class }))),
                     @ApiResponse(responseCode = "400", description = "Invalid input data")
             }
     )
