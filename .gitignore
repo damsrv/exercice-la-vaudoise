@@ -1,6 +1,11 @@
 .env
 HELP.md
-target/
+# Ignorer tout le contenu du dossier target
+target/*
+
+# Ne pas ignorer le fichier JAR spécifique
+!target/insurance-api-0.0.1-SNAPSHOT.jar
+
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
