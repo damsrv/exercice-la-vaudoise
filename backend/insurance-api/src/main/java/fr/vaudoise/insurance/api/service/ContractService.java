@@ -80,7 +80,6 @@ public class ContractService {
             throw new EntityNotFoundException("Client not found with id: " + clientId);
         }
 
-        LocalDate now = LocalDate.now();
         BigDecimal sum = contractRepository.sumActiveContractsCostByClientId(clientId);
 
         return new ClientContractSumDTO(clientId, sum);
