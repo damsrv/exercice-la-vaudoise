@@ -101,3 +101,24 @@ Le projet utilise une architecture conteneurisée avec Docker Compose :
 - **Polymorphisme JSON** : `@JsonTypeInfo` pour gérer Person/Company via champ `type`
 - **Conteneurisation** : Nginx + Spring Boot + PostgreSQL pour déploiement simple et scalable
 
+## 📊 URL pour tester l'API depuis POSTMAN
+
+# 📂 Clients
+
+| Action | Méthode | URL |
+|--------|--------|-----|
+| Créer un client (Person) | POST | http://localhost/api/clients |
+| Créer un client (Company) | POST | http://localhost/api/clients |
+| Récupérer un client | GET | http://localhost/api/clients/{id} |
+| Mettre à jour un client | PUT | http://localhost/api/clients/{id} |
+| Supprimer un client | DELETE | http://localhost/api/clients/{id} |
+
+# 📂 Contrats
+
+| Action | Méthode | URL |
+|--------|--------|-----|
+| Créer un contrat | POST | http://localhost/api/contracts |
+| Mettre à jour le coût d’un contrat | PUT | http://localhost/api/contracts/{id}/cost |
+| Récupérer les contrats actifs d’un client | GET | http://localhost/api/contracts/client/{clientId} |
+| Récupérer les contrats actifs filtrés par date de mise à jour | GET | http://localhost/api/contracts/client/{clientId}?updateDate={yyyy-MM-dd} |
+| Obtenir la somme des coûts des contrats actifs d’un client | GET | http://localhost/api/contracts/client/{clientId}/sum |
