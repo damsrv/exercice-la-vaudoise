@@ -18,15 +18,13 @@ Damien COTE.
 
 ## 📋 Informations sur les mots de passe
 
-Pour simplifier le test de l'API, je me suis permis de mettre les informations de connexion à la base en dur dans les 
-différents fichiers.
+Pour simplifier le test de l'API, je me suis permis de mettre les informations de connexion à la base en dur dans les différents fichiers.
 
 Cela n'est évidemment pas une bonne pratique en entreprise ou dans tout projet professionnel 😅
 
 ## 📋 La jar insurance-API-0.0.1-SNAPSHOT.jar
 
-Pour simplifier le test de l'API, le dossier target (contenant la jar SpringBoot) a exceptionnellement été push sur le
-repo pour que vous puissiez lancer le projet plus simplement.
+Pour simplifier le test de l'API, la jar SpringBoot a été push sur le repo pour que vous puissiez lancer le projet plus simplement.
 
 Si vous souhaitez tout de même générer la jar, vous pouvez le faire via les wrappers maven :
 
