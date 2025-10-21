@@ -35,9 +35,18 @@ Si vous souhaitez tout de même générer la jar, vous pouvez le faire via les w
 
 ### 1. Cloner le projet
 
+```bash
   git clone https://github.com/damsrv/exercice-la-vaudoise.git
+```
 
 ### 2. Lancer les conteneurs Docker
+
+#### a. Se déplacer dans le dossier exercice-la-vaudoise
+
+```bash
+  cd exercice-la-vaudoise
+```
+#### b. Build et run les conteneurs
 
 ```bash
   docker-compose up --build -d
